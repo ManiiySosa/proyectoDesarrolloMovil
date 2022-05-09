@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ServiciosLSM</string>
+    <string name="title_login">Ingresa tus credenciales</string>
+    <string name="title_register">REGISTRATE</string>
+    <string name="title_email">INGRESA TU CORREO</string>
+    <string name="title_password">INGRESA TU CONTRASEÑA</string>
+    <string name="title_checkbox_interprete">CUENTA INTERPRETE</string>
+    <string name="title_checkbox_sordo">CUENTA SORDO</string>
+    <string name="title_tvFoto">FOTO DE PERFIL</string>
+    <string name="texto_btnEntrar">Entrar</string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/title_email"
+        android:textColor="@color/blacktxt"
+        android:textSize="@dimen/sizeInputs"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/tvTitleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FD511A"
+        android:drawableEnd="@drawable/ic_title_login"
+        android:fontFamily="casual"
+        android:gravity="left|center"
+        android:letterSpacing=".04"
+        android:padding="10sp"
+        android:text="@string/title_login"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeTitles"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/ivHolaLSM"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:adjustViewBounds="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109"
+        app:srcCompat="@drawable/hola_lsm_br" />
+
+    <EditText
+        android:id="@+id/etEmailLogin"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10sp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeInputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etPasswordLogin"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="@string/title_password"
+        android:paddingLeft="10sp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeInputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.669"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/title_password"
+        android:textColor="@color/blacktxt"
+        android:textSize="@dimen/sizeInputs"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.589" />
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:theme="@style/RaisedButton"
+        android:layout_width="340dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/etPasswordLogin"
+        android:text="@string/texto_btnEntrar"
+        android:textSize="@dimen/sizeTextButtons"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        android:letterSpacing="0.3"
+        android:textAlignment="center"
+        android:drawableRight="@drawable/ic_entrar"
+        android:paddingRight="60dp"
+        android:paddingLeft="60dp"
+        android:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.777" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

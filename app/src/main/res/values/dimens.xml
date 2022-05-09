@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sizeTitles">22sp</dimen>
+    <dimen name="sizeInputs">20sp</dimen>
+    <dimen name="sizeTxt">18sp</dimen>
+    <dimen name="sizeTextButtons">24sp</dimen>
+</resources>
