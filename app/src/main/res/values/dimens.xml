@@ -4,4 +4,13 @@
     <dimen name="sizeInputs">20sp</dimen>
     <dimen name="sizeTxt">18sp</dimen>
     <dimen name="sizeTextButtons">24sp</dimen>
+    <dimen name="marginBotton">2dp</dimen>
+    <dimen name="heigthVideo">200dp</dimen>
+    <dimen name="marginVideo">10dp</dimen>
+    <dimen name="heigthButtons">60dp</dimen>
+    <dimen name="heigthToolbar">64dp</dimen>
+    <dimen name="elevationToolbar">4dp</dimen>
+    <dimen name="heigthInputs">55dp</dimen>
+    <dimen name="widthInputs">340dp</dimen>
+    <dimen name="widthButtons">360dp</dimen>
 </resources>

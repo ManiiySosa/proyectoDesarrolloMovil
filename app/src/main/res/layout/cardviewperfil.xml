@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvPerfil"
+    android:layout_marginBottom="@dimen/marginBotton"
+    android:padding="5dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNombrePerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_tvNombrePerfil"
+            android:textSize="@dimen/sizeTxt"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/blacktxt"
+            />
+
+        <ImageView
+            android:id="@+id/vvPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heigthVideo"
+            android:layout_margin="@dimen/marginVideo"/>
+
+        <Button
+            android:id="@+id/btnVerPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heigthButtons"
+            android:layout_gravity="center"
+            android:theme="@style/RaisedButton"
+            android:text="@string/texto_btnVerPerfil"
+            android:drawableEnd="@drawable/ic_perfil"
+            android:textSize="@dimen/sizeTextButtons"
+            android:layout_marginBottom="5dp"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

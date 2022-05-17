@@ -4,14 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.191" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_city.xml" value="0.201" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_email.xml" value="0.181" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_entrar.xml" value="0.1915" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_launcher_background.xml" value="0.201" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_password.xml" value="0.181" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_person.xml" value="0.201" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_register.xml" value="0.201" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/ic_title_login.xml" value="0.1705" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/drawable/icon_title_login.xml" value="0.1705" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_crear_servicio.xml" value="0.2" />
         <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_destacados.xml" value="0.17192982456140352" />
-        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_main.xml" value="0.21" />
-        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_register.xml" value="0.18070652173913043" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_main.xml" value="0.19" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_perfil_interprete.xml" value="0.17192982456140352" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/cardviewperfil.xml" value="0.17192982456140352" />
+        <entry key="..\:/Users/guita/AndroidStudioProjects/ServiciosLSM/app/src/main/res/layout/toolbar.xml" value="0.2" />
       </map>
     </option>
   </component>

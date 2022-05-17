@@ -7,5 +7,19 @@
     <string name="title_checkbox_interprete">CUENTA INTERPRETE</string>
     <string name="title_checkbox_sordo">CUENTA SORDO</string>
     <string name="title_tvFoto">FOTO DE PERFIL</string>
-    <string name="texto_btnEntrar">Entrar</string>
+    <string name="texto_btnEntrar">ENTRAR</string>
+    <string name="texto_btnRegistrase">REGISTRARSE</string>
+    <string name="texto_tvNombrePerfil">Nombre Interprete</string>
+    <string name="texto_btnVerPerfil">Ver Perfil</string>
+    <string name="texto_tvCrearServicio">Crear Servicio</string>
+    <string name="texto_tvAñosExperiencia">Años experiencia LSM</string>
+    <string name="texto_etAreaEspecialidad">AREA ESPECIALIDAD</string>
+    <string name="texto_etNombre">INGRESA TU NOMBRE</string>
+    <string name="texto_etCorreo">INGRESA TU CORREO</string>
+    <string name="texto_etContraseña">INGRESA TU CONTRASEÑA</string>
+    <string name="texto_etCiudad">INGRESA TU CIUDAD</string>
+    <string name="texto_btnInsertarFoto">insertar foto</string>
+    <string name="texto_btnCrearCuenta">CREAR CUENTA</string>
+    <string name="texto_etTelefono">TELEFONO</string>
+    <string name="texto_btnCrearServicio">Crear Servicio</string>
 </resources>

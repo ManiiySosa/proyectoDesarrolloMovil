@@ -6,49 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
-    <EditText
-        android:id="@+id/etNombreRegister"
-        android:layout_width="356dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingLeft="10sp"
-        android:textAllCaps="true"
-        android:textSize="@dimen/sizeInputs"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <CheckBox
-        android:id="@+id/cbSordo"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="@string/title_checkbox_interprete"
-        android:textColor="@color/blacktxt"
-        android:textSize="@dimen/sizeInputs"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
-
     <TextView
         android:id="@+id/tvTitleRegister"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:background="@color/green"
+        android:background="#FD511A"
         android:drawableEnd="@drawable/ic_title_login"
-        android:fontFamily="casual"
+        android:fontFamily="sans-serif-thin"
         android:gravity="center"
-        android:letterSpacing=".06"
+        android:letterSpacing="0.2"
         android:paddingLeft="30sp"
         android:paddingRight="90sp"
         android:text="@string/title_register"
@@ -64,7 +30,7 @@
         tools:ignore="RtlCompat" />
 
     <CheckBox
-        android:id="@+id/cbInterprete"
+        android:id="@+id/cbSordo"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:text="@string/title_checkbox_sordo"
@@ -78,29 +44,95 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.256" />
 
-    <TextView
-        android:id="@+id/tvFotoPerfil"
-        android:layout_width="wrap_content"
+    <CheckBox
+        android:id="@+id/cbInterprete"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:fontFamily="monospace"
-        android:text="@string/title_email"
+        android:text="@string/title_checkbox_interprete"
         android:textColor="@color/blacktxt"
         android:textSize="@dimen/sizeInputs"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.871"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.851" />
+        app:layout_constraintVertical_bias="0.255" />
 
     <EditText
-        android:id="@+id/etCiudadRegister"
+        android:id="@+id/etNombre"
         android:layout_width="356dp"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/heigthInputs"
         android:background="@color/white"
         android:ems="10"
-        android:gravity="center"
+        android:inputType="textPersonName"
+        android:paddingLeft="10sp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeInputs"
+        android:drawableStart="@drawable/ic_person"
+        android:hint="@string/texto_etNombre"
+        android:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.368"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+    <EditText
+        android:id="@+id/etCorreo"
+        android:layout_width="356dp"
+        android:layout_height="@dimen/heigthInputs"
+        android:layout_below="@id/etNombre"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_email"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/texto_etCorreo"
+        android:inputType="textPersonName"
+        android:paddingLeft="10sp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeInputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etContraseña"
+        android:layout_width="356dp"
+        android:layout_height="@dimen/heigthInputs"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_password"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/texto_etContraseña"
+        android:inputType="textPassword"
+        android:paddingLeft="10sp"
+        android:textAllCaps="true"
+        android:textSize="@dimen/sizeInputs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etCiudad"
+        android:layout_width="356dp"
+        android:layout_height="@dimen/heigthInputs"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_city"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="@string/texto_etCiudad"
         android:inputType="textPersonName"
         android:paddingLeft="10sp"
         android:textAllCaps="true"
@@ -110,45 +142,60 @@
         app:layout_constraintHorizontal_bias="0.567"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.759"
+        app:layout_constraintVertical_bias="0.701"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <EditText
-        android:id="@+id/etPasswordRegister"
-        android:layout_width="356dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:paddingLeft="10sp"
-        android:textAllCaps="true"
+    <TextView
+        android:id="@+id/tvFotoPerfil"
+        android:layout_width="127dp"
+        android:layout_height="55dp"
+        android:fontFamily="monospace"
+        android:text="@string/title_tvFoto"
+        android:textColor="@color/blacktxt"
         android:textSize="@dimen/sizeInputs"
+        android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.811" />
 
-    <EditText
-        android:id="@+id/etCorreoRegister"
-        android:layout_width="356dp"
-        android:layout_height="60dp"
-        android:background="@color/white"
-        android:ems="10"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:paddingLeft="10sp"
-        android:textAllCaps="true"
-        android:textSize="@dimen/sizeInputs"
+    <Button
+        android:id="@+id/btnInsertarFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigthButtons"
+        android:text="@string/texto_btnInsertarFoto"
+        android:theme="@style/RaisedButton"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:drawableEnd="@drawable/ic_add_photo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.92"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.816" />
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigthButtons"
+        android:backgroundTint="@color/green"
+        android:drawableRight="@drawable/ic_entrar"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.2"
+        android:text="@string/texto_btnCrearCuenta"
+        android:textSize="@dimen/sizeTextButtons"
+        android:textStyle="bold"
+        android:theme="@style/RaisedButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.679"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

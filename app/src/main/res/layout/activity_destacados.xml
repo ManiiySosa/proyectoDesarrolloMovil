@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".Destacados">
 
+    <include android:id="@+id/miToolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPerfiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/miToolbar"
+        android:layout_marginTop="15dp"
+        />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
