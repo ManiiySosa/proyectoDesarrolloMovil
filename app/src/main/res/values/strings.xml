@@ -22,4 +22,6 @@
     <string name="texto_btnCrearCuenta">CREAR CUENTA</string>
     <string name="texto_etTelefono">TELEFONO</string>
     <string name="texto_btnCrearServicio">Crear Servicio</string>
+    <string name="texto_toast_login">BIENVENIDO</string>
+    <string name="txt_progressdialog_login">Iniciando sesion...</string>
 </resources>
