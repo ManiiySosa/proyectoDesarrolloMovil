@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332067225074",
+    "project_id": "servicioslsm",
+    "storage_bucket": "servicioslsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332067225074:android:94029d549a686da43d3f6b",
+        "android_client_info": {
+          "package_name": "mx.desarrollomovil.uv.servicioslsm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332067225074-nt25e4gjsdb8o8oatgj11u60i8iescol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLVlp1N9E4QPe18z4rm0HZ-pIaTJxa4Dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332067225074-nt25e4gjsdb8o8oatgj11u60i8iescol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ServiciosLSM</string>
-    <string name="title_login">Ingresa tus credenciales</string>
+    <string name="texto_title_login">Ingresa tus credenciales</string>
     <string name="title_register">REGISTRATE</string>
     <string name="title_email">INGRESA TU CORREO</string>
     <string name="title_password">INGRESA TU CONTRASEÑA</string>
