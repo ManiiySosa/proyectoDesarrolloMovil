@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             etEmailLogin.setError("Debes ingresar un correo");
             etEmailLogin.requestFocus();
         }else if(TextUtils.isEmpty(contraseña)){
-            Toast.makeText(MainActivity.this, "Falta ingresar la contraseña", Toast.LENGTH_LONG);
+            etPasswordLogin.setError("Debes ingresar una contraseña");
             etPasswordLogin.requestFocus();
         }else{
             firebaseAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -80,8 +80,9 @@ public class MainActivity extends AppCompatActivity {
                        startActivity(new Intent(MainActivity.this, Destacados.class));
                     }else{
                         Log.w("TAG", "Error inicio sesion", task.getException());
-                        progressDialog.dismiss();
+                        Toast.makeText(MainActivity.this, "Usuario o contraseña incorrecto", Toast.LENGTH_SHORT).show();
                     }
+                    progressDialog.dismiss();
                 }
             });
         }

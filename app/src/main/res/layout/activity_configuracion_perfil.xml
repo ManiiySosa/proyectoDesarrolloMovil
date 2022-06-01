@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfiguracionPerfil">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:paddingTop="@dimen/cinco"
+        android:src="@drawable/avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133" />
+
+    <TextView
+        android:id="@+id/tvNombreId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="162dp"
+        android:fontFamily="monospace"
+        android:text="tu nombre"
+        android:textColor="@color/blacktxt"
+        android:textSize="@dimen/veinte"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/imgPerfil"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="@+id/imgPerfil"
+        app:layout_constraintTop_toTopOf="@+id/imgPerfil" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="match_parent"
+        android:text="@string/txt_continuar"
+        android:layout_height="@dimen/heigthButtons"
+        android:backgroundTint="@color/green"
+        android:theme="@style/RaisedButton"
+        android:fontFamily="sans-serif"
+        android:textSize="@dimen/sizeTextButtons"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvNombreId"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreId"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreId"
+        app:layout_constraintVertical_bias="0.076" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

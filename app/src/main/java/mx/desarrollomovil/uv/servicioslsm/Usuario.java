@@ -1,31 +1,34 @@
 package mx.desarrollomovil.uv.servicioslsm;
 
 public class Usuario {
-    private int id;
+    private String id;
     private String nombre;
-    private String apellido;
+    //private String apellido;
     private String correo;
     private String contraseña;
     private String ciudad;
-    private int foto;
-    private char tipo;
+    private String imgUrl;
+    private String tipo;
 
-    public Usuario(int id, String nombre, String apellido, String correo, String contraseña, String ciudad, int foto, char tipo) {
+    public Usuario(){
+
+    }
+
+    public Usuario(String id, String nombre, String correo, String contraseña, String ciudad, String imgUrl, String tipo) {
         this.id = id;
         this.nombre = nombre;
-        this.apellido = apellido;
         this.correo = correo;
         this.contraseña = contraseña;
         this.ciudad = ciudad;
-        this.foto = foto;
+        this.imgUrl = imgUrl;
         this.tipo = tipo;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,14 +38,6 @@ public class Usuario {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
     }
 
     public String getCorreo() {
@@ -69,19 +64,19 @@ public class Usuario {
         this.ciudad = ciudad;
     }
 
-    public int getFoto() {
-        return foto;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setFoto(int foto) {
-        this.foto = foto;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
-    public char getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(char tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 }

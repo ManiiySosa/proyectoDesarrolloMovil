@@ -44,7 +44,7 @@ public class Destacados extends AppCompatActivity {
         perfiles = new ArrayList<Usuario>();
         perfilesServicios = new ArrayList<Servicio>();
 
-        perfiles.add(new Usuario(
+        /*perfiles.add(new Usuario(
                 1, "Manuel", "Sosa", "mani@sosa", "12345", "Xalapa", R.drawable.ic_perfil, 'I'
         ));
         perfiles.add(new Usuario(
@@ -53,6 +53,6 @@ public class Destacados extends AppCompatActivity {
 
         perfilesServicios.add(new Servicio(
                 1, 5, "Educacion", "2233445566", R.drawable.ic_launcher_background, 1
-        ));
+        ));*/
     }
 }

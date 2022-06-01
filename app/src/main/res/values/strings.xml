@@ -4,8 +4,8 @@
     <string name="title_register">REGISTRATE</string>
     <string name="title_email">INGRESA TU CORREO</string>
     <string name="title_password">INGRESA TU CONTRASEÑA</string>
-    <string name="title_checkbox_interprete">CUENTA INTERPRETE</string>
-    <string name="title_checkbox_sordo">CUENTA SORDO</string>
+    <string name="texto_rbInterprete">CUENTA INTERPRETE</string>
+    <string name="texto_rbSordo">CUENTA SORDO</string>
     <string name="title_tvFoto">FOTO DE PERFIL</string>
     <string name="texto_btnEntrar">ENTRAR</string>
     <string name="texto_btnRegistrase">REGISTRARSE</string>
@@ -24,4 +24,7 @@
     <string name="texto_btnCrearServicio">Crear Servicio</string>
     <string name="texto_toast_login">BIENVENIDO</string>
     <string name="txt_progressdialog_login">Iniciando sesion...</string>
+    <string name="txt_btnIrLogin">INICIAR SESION</string>
+    <string name="txt_btnSiguiente">SIGUIENTE</string>
+    <string name="txt_continuar">CONTINUAR</string>
 </resources>

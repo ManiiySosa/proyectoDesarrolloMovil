@@ -26,38 +26,37 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137"
+        app:layout_constraintVertical_bias="0.098"
         tools:ignore="RtlCompat" />
 
-    <CheckBox
-        android:id="@+id/cbSordo"
-        android:layout_width="160dp"
+    <RadioGroup
+        android:id="@+id/rgTipo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_checkbox_sordo"
-        android:textColor="@color/blacktxt"
-        android:textSize="@dimen/sizeInputs"
-        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/cuarenta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+        app:layout_constraintVertical_bias="0.24">
 
-    <CheckBox
-        android:id="@+id/cbInterprete"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="@string/title_checkbox_interprete"
-        android:textColor="@color/blacktxt"
-        android:textSize="@dimen/sizeInputs"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
+        <RadioButton
+            android:id="@+id/rbSordo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_rbSordo"
+            android:fontFamily="sans-serif-black"
+            android:textSize="@dimen/sizeTxt"/>
+
+        <RadioButton
+            android:id="@+id/rbInterprete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_rbInterprete"
+            android:fontFamily="sans-serif-black"
+            android:textSize="@dimen/sizeTxt"/>
+
+    </RadioGroup>
 
     <EditText
         android:id="@+id/etNombre"
@@ -145,45 +144,12 @@
         app:layout_constraintVertical_bias="0.701"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/tvFotoPerfil"
-        android:layout_width="127dp"
-        android:layout_height="55dp"
-        android:fontFamily="monospace"
-        android:text="@string/title_tvFoto"
-        android:textColor="@color/blacktxt"
-        android:textSize="@dimen/sizeInputs"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.811" />
-
     <Button
-        android:id="@+id/btnInsertarFoto"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/heigthButtons"
-        android:text="@string/texto_btnInsertarFoto"
-        android:theme="@style/RaisedButton"
-        android:textStyle="bold"
-        android:textSize="16dp"
-        android:drawableEnd="@drawable/ic_add_photo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.92"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
-
-    <Button
-        android:id="@+id/btnCrearCuenta"
+        android:id="@+id/btnSiguiente"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/heigthButtons"
         android:backgroundTint="@color/green"
-        android:drawableRight="@drawable/ic_entrar"
+        android:drawableRight="@drawable/ic_flecha_sig"
         android:fontFamily="sans-serif"
         android:letterSpacing="0.2"
         android:text="@string/texto_btnCrearCuenta"
@@ -192,10 +158,27 @@
         android:theme="@style/RaisedButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.935" />
+        app:layout_constraintVertical_bias="0.827" />
+
+    <Button
+        android:id="@+id/btnIrLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigthButtons"
+        android:backgroundTint="@color/cyandark"
+        android:drawableLeft="@drawable/ic_fecha_left"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.1"
+        android:text="@string/txt_btnIrLogin"
+        android:textSize="@dimen/sizeTextButtons"
+        android:textStyle="bold"
+        android:theme="@style/RaisedButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
