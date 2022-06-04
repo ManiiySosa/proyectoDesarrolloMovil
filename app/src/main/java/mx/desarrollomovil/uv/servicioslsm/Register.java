@@ -33,7 +33,7 @@ import java.util.Map;
 
 public class Register extends AppCompatActivity {
 
-    private static final int GALLERY_INTENT = 1;
+   // private static final int GALLERY_INTENT = 1;
 
     private RadioButton rbSordo, rbInterprete;
     private EditText etNombre, etCorreo, etContraseña, etCiudad;
@@ -122,7 +122,7 @@ public class Register extends AppCompatActivity {
         String contraseña = etContraseña.getText().toString().trim();
         String ciudad = etCiudad.getText().toString().trim();
 
-        if(TextUtils.isEmpty(tipo)){
+        if(tipo.isEmpty()){
             Toast.makeText(this, "Elige un tipo de cuenta", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(nombre)) {
             etNombre.setError("Ingresa tu nombre");
@@ -143,22 +143,8 @@ public class Register extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        userId = firebaseAuth.getCurrentUser().getUid();
-                        DocumentReference documentReference = db.collection("users").document(userId);
-
-                        Map<String, Object> user = new HashMap<>();
-                        user.put("nombre", nombre);
-                        user.put("correo", correo);
-                        user.put("contraseña", contraseña);
-                        user.put("ciudad", ciudad);
-                        user.put("tipo", finalTipo);
-
-                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void unused) {
-                                Log.d("TAG", "onSucces: Datos registrados " + userId);
-                            }
-                        });
+                        pd.setMessage("Espera un momento...");
+                        pd.show();
 
                         Intent intent = new Intent(Register.this, ConfiguracionPerfil.class);
                         intent.putExtra("nombre", nombre);
@@ -168,12 +154,9 @@ public class Register extends AppCompatActivity {
                         intent.putExtra("tipo", finalTipo);
                         startActivity(intent);
 
-                        pd.setMessage("Espera un momento...");
-                        pd.show();
-
-                        Toast.makeText(Register.this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Correo registrado", Toast.LENGTH_LONG).show();
                     }else{
-                        Toast.makeText(Register.this, "Usuario  no registrado"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Usuario  no registrado "+task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                         pd.dismiss();
                 }

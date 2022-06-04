@@ -1,16 +1,14 @@
 package mx.desarrollomovil.uv.servicioslsm;
 
-import java.util.Date;
-
 public class Servicio {
-    private int id;
+    private String id;
     private int añosExperiencia;
     private String areaEspecialidad;
     private String telefono;
     private int img;
-    private int idUsuario;
+    private String idUsuario;
 
-    public Servicio(int id, int añosExperiencia, String areaEspecialidad, String telefono, int img, int idUsuario) {
+    public Servicio(String id, int añosExperiencia, String areaEspecialidad, String telefono, int img, String idUsuario) {
         this.id = id;
         this.añosExperiencia = añosExperiencia;
         this.areaEspecialidad = areaEspecialidad;
@@ -19,11 +17,11 @@ public class Servicio {
         this.idUsuario=idUsuario;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -59,11 +57,11 @@ public class Servicio {
         this.img = video;
     }
 
-    public int getIdUsuario() {
+    public String getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
+    public void setIdUsuario(String idUsuario) {
         this.idUsuario = idUsuario;
     }
 }
