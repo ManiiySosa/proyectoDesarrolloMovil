@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/btnMenu"
+          android:icon="@drawable/ic_menu_opciones"
+          android:title="mas"
+          app:showAsAction="always"
+           >
+        <menu>
+            <item android:id="@+id/mCrearServicio"
+                android:title="@string/txt_mCrearServicio"
+                android:orderInCategory="10"
+                >
+            </item>
+            <item android:id="@+id/mEditarServicio"
+                android:title="@string/txt_mEditarServicio"
+                android:orderInCategory="11"
+                >
+            </item>
+            <item android:id="@+id/mVerValoraciones"
+                android:title="@string/txt_mVerValoraciones"
+                android:orderInCategory="12"
+                >
+            </item>
+        </menu>
+
+    </item>
+</menu>

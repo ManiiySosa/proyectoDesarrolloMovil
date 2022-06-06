@@ -19,6 +19,7 @@
     <string name="texto_etContraseña">INGRESA TU CONTRASEÑA</string>
     <string name="texto_etCiudad">INGRESA TU CIUDAD</string>
     <string name="texto_btnInsertarFoto">insertar foto</string>
+    <string name="txt_btnInsertarVideo">Insertar Video</string>
     <string name="texto_btnCrearCuenta">CREAR CUENTA</string>
     <string name="texto_etTelefono">TELEFONO</string>
     <string name="texto_btnCrearServicio">Crear Servicio</string>
@@ -27,4 +28,7 @@
     <string name="txt_btnIrLogin">INICIAR SESION</string>
     <string name="txt_btnSiguiente">SIGUIENTE</string>
     <string name="txt_continuar">CONTINUAR</string>
+    <string name="txt_mCrearServicio">CREAR SERVICIO</string>
+    <string name="txt_mEditarServicio">EDITAR SERVICIO</string>
+    <string name="txt_mVerValoraciones">VER VALORACIONES</string>
 </resources>

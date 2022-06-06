@@ -2,12 +2,22 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/miToolbar"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/heigthToolbar"
+    android:layout_height="?attr/actionBarSize"
     android:background="@color/cyan"
     android:elevation="@dimen/elevationToolbar"
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPerfil"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:paddingTop="@dimen/cinco"
+        android:src="@drawable/avatar"
+         />
 
 </androidx.appcompat.widget.Toolbar>

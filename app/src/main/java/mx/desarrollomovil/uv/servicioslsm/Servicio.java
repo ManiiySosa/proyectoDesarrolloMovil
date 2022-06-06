@@ -5,15 +5,19 @@ public class Servicio {
     private int añosExperiencia;
     private String areaEspecialidad;
     private String telefono;
-    private int img;
+    private String videoUrl;
     private String idUsuario;
 
-    public Servicio(String id, int añosExperiencia, String areaEspecialidad, String telefono, int img, String idUsuario) {
+    public Servicio(){
+
+    }
+
+    public Servicio(String id, int añosExperiencia, String areaEspecialidad, String telefono, String videoUrl, String idUsuario) {
         this.id = id;
         this.añosExperiencia = añosExperiencia;
         this.areaEspecialidad = areaEspecialidad;
         this.telefono = telefono;
-        this.img = img;
+        this.videoUrl = videoUrl;
         this.idUsuario=idUsuario;
     }
 
@@ -49,12 +53,12 @@ public class Servicio {
         this.telefono = telefono;
     }
 
-    public int getImg() {
-        return img;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
-    public void setImg(int video) {
-        this.img = video;
+    public void setVideoUrl(String video) {
+        this.videoUrl= video;
     }
 
     public String getIdUsuario() {

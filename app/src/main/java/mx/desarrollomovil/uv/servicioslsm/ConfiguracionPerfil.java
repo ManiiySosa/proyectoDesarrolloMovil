@@ -50,6 +50,8 @@ public class ConfiguracionPerfil extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuracion_perfil);
 
+        this.setTitle("Elegir foto de perfil");
+
         imageView = (CircleImageView) findViewById(R.id.imgPerfil);
         btnContinuar = (Button) findViewById(R.id.btnContinuar);
         tvNombreUsuario = (TextView) findViewById(R.id.tvNombreId);
@@ -78,6 +80,7 @@ public class ConfiguracionPerfil extends AppCompatActivity {
             }
         });
 
+        // con firebastore database
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,7 +111,7 @@ public class ConfiguracionPerfil extends AppCompatActivity {
                                 public void onSuccess(Void unused) {
                                     progressDialog.dismiss();
                                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                                    Toast.makeText(ConfiguracionPerfil.this, "creacion perfil exitoso", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ConfiguracionPerfil.this, "creacion perfil exitoso, inicia sesion", Toast.LENGTH_SHORT).show();
                                     startActivity(intent);
                                     finish();
                                 }
@@ -127,7 +130,7 @@ public class ConfiguracionPerfil extends AppCompatActivity {
                                 public void onSuccess(Void unused) {
                                     progressDialog.dismiss();
                                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
-                                    Toast.makeText(ConfiguracionPerfil.this, "creacion perfil exitoso", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ConfiguracionPerfil.this, "creacion perfil exitoso, inicia sesion", Toast.LENGTH_SHORT).show();
                                     startActivity(intent);
                                     finish();
                                 }
@@ -159,7 +162,10 @@ public class ConfiguracionPerfil extends AppCompatActivity {
             imageView.setImageURI(data.getData());
             selectedImage = data.getData();
         }
+    }
+}
 
+//con realtime database
         /* if(data != null){
             if(data.getData() != null){
                 Uri uri = data.getData(); //filepath
@@ -192,5 +198,3 @@ public class ConfiguracionPerfil extends AppCompatActivity {
             }
 
         } */
-    }
-}

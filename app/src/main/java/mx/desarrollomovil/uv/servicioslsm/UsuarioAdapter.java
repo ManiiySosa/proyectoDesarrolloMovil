@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>{
+/*public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioViewHolder>{
     ArrayList<Usuario> perfiles;
     ArrayList<Servicio> servicios;
 
@@ -55,4 +55,4 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.UsuarioV
             btnVerPerfil = (Button) itemView.findViewById(R.id.btnVerPerfil);
         }
     }
-}
+}*/
