@@ -34,12 +34,6 @@ public class Destacados extends AppCompatActivity {
 
         civ = (CircleImageView) findViewById(R.id.imgPerfil);
 
-       // listaServicios = (RecyclerView) findViewById(R.id.rvPerfiles);
-       /* LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaServicios.setLayoutManager(llm);
-        inicializarListaServicios();
-        inicializarAdapter();*/
     }
 
     @Override

@@ -1,4 +1,4 @@
-package mx.desarrollomovil.uv.servicioslsm;
+package mx.desarrollomovil.uv.servicioslsm.model;
 
 public class Usuario {
     private String id;

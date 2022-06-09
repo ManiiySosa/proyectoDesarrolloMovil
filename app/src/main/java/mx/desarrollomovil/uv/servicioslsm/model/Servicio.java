@@ -1,39 +1,39 @@
-package mx.desarrollomovil.uv.servicioslsm;
+package mx.desarrollomovil.uv.servicioslsm.model;
 
 public class Servicio {
-    private String id;
-    private int añosExperiencia;
+    private String serviceId;
+    private String añosExperiencia;
     private String areaEspecialidad;
     private String telefono;
     private String videoUrl;
-    private String idUsuario;
+    private String userId;
 
     public Servicio(){
 
     }
 
-    public Servicio(String id, int añosExperiencia, String areaEspecialidad, String telefono, String videoUrl, String idUsuario) {
-        this.id = id;
+    public Servicio(String id, String añosExperiencia, String areaEspecialidad, String telefono, String videoUrl, String userId) {
+        this.serviceId = id;
         this.añosExperiencia = añosExperiencia;
         this.areaEspecialidad = areaEspecialidad;
         this.telefono = telefono;
         this.videoUrl = videoUrl;
-        this.idUsuario=idUsuario;
+        this.userId=userId;
     }
 
-    public String getId() {
-        return id;
+    public String getServiceId() {
+        return serviceId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setServiceId(String serviceId) {
+        this.serviceId = serviceId;
     }
 
-    public int getAñosExperiencia() {
+    public String getAñosExperiencia() {
         return añosExperiencia;
     }
 
-    public void setAñosExperiencia(int añosExperiencia) {
+    public void setAñosExperiencia(String añosExperiencia) {
         this.añosExperiencia = añosExperiencia;
     }
 
@@ -61,11 +61,11 @@ public class Servicio {
         this.videoUrl= video;
     }
 
-    public String getIdUsuario() {
-        return idUsuario;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setUserId(String idUsuario) {
+        this.userId = idUsuario;
     }
 }

@@ -70,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
             etPasswordLogin.setError("Debes ingresar una contraseña");
             etPasswordLogin.requestFocus();
         }else{
+            progressDialog.setMessage("iniciando sesion...");
+            progressDialog.show();
             firebaseAuth.signInWithEmailAndPassword(correo, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                       progressDialog.setMessage(getResources().getString(R.string.txt_progressdialog_login));
-                       progressDialog.show();
                        Toast.makeText(getBaseContext(), getResources().getString(R.string.texto_toast_login), Toast.LENGTH_LONG);
                        startActivity(new Intent(MainActivity.this, Destacados.class));
                     }else{
