@@ -7,49 +7,73 @@
     android:padding="@dimen/diez"
     android:layout_margin="@dimen/diez"
     android:backgroundTint="@color/white"
-    app:cardCornerRadius="@dimen/diez">
+    app:cardElevation="@dimen/cinco"
+    app:cardCornerRadius="@dimen/quince">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/tvNombrePerfil"
+        <ImageView
+            android:id="@+id/imgCvPerfil"
+            android:layout_width="110sp"
+            android:layout_height="110sp"
+            android:layout_margin="@dimen/quince"
+            />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/texto_tvNombrePerfil"
-            android:textSize="@dimen/sizeTxt"
-            android:fontFamily="sans-serif"
-            android:textStyle="bold"
-            android:paddingTop="10dp"
-            android:paddingBottom="5dp"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textColor="@color/blacktxt"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/cinco"
+            android:layout_marginRight="@dimen/diez">
+
+            <TextView
+                android:id="@+id/tvCvNombrePerfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_tvNombrePerfil"
+                android:textSize="@dimen/sizeTxt"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:padding="@dimen/cinco"
+                android:textColor="@color/blacktxt"
+                android:layout_marginTop="@dimen/cinco"
+                android:layout_marginBottom="@dimen/cinco"
+                />
+
+            <TextView
+                android:id="@+id/tvCvCiudad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_tvCvCiudad"
+                android:textColor="@color/blacktxt"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/sizeTxt"
+                android:layout_marginBottom="@dimen/cinco"
             />
 
-        <VideoView
-            android:id="@+id/vvInterprete"
-            android:layout_width="match_parent"
-            android:layout_height="240sp"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/diez">
+            <TextView
+                android:id="@+id/tvCvCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_tvCvCorreo"
+                android:textColor="@color/blacktxt"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:textSize="@dimen/sizeTxt"
+                android:layout_marginBottom="@dimen/cinco"/>
 
-        </VideoView>
+            <Button
+                android:id="@+id/btnCvVerPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/texto_btnVerPerfil"
+                android:drawableEnd="@drawable/ic_eye"/>
 
-        <Button
-            android:id="@+id/btnVerPerfil"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/heigthButtons"
-            android:layout_gravity="center"
-            android:theme="@style/RaisedButton"
-            android:text="@string/texto_btnVerPerfil"
-            android:drawableEnd="@drawable/ic_perfil"
-            android:textSize="@dimen/sizeTextButtons"
-            android:layout_marginBottom="@dimen/diez"
-            android:layout_marginTop="@dimen/diez"
-            />
+
+        </LinearLayout>
 
     </LinearLayout>
 

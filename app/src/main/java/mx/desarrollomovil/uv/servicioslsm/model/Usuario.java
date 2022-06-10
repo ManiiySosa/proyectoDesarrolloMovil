@@ -10,8 +10,11 @@ public class Usuario {
     private String imgUrl;
     private String tipo;
 
-    public Usuario(){
-
+    public Usuario(String imgUrl, String nombre, String ciudad, String correo){
+        this.imgUrl=imgUrl;
+        this.nombre=nombre;
+        this.ciudad=ciudad;
+        this.correo=correo;
     }
 
     public Usuario(String id, String nombre, String correo, String contraseña, String ciudad, String imgUrl, String tipo) {

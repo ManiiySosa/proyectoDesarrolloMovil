@@ -2,6 +2,7 @@ package mx.desarrollomovil.uv.servicioslsm.model;
 
 public class Servicio {
     private String serviceId;
+    private String nombreCompleto;
     private String añosExperiencia;
     private String areaEspecialidad;
     private String telefono;
@@ -12,8 +13,14 @@ public class Servicio {
 
     }
 
-    public Servicio(String id, String añosExperiencia, String areaEspecialidad, String telefono, String videoUrl, String userId) {
+    public Servicio(String videoUrl){
+        this.videoUrl = videoUrl;
+
+    }
+
+    public Servicio(String id, String nombreCompleto, String añosExperiencia, String areaEspecialidad, String telefono, String videoUrl, String userId) {
         this.serviceId = id;
+        this.nombreCompleto = nombreCompleto;
         this.añosExperiencia = añosExperiencia;
         this.areaEspecialidad = areaEspecialidad;
         this.telefono = telefono;
@@ -67,5 +74,13 @@ public class Servicio {
 
     public void setUserId(String idUsuario) {
         this.userId = idUsuario;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
     }
 }

@@ -43,9 +43,9 @@ public class CrearServicio extends AppCompatActivity {
 
     private static final int PICK_VIDEO = 1;
 
-    String userId, serviceId, añosExperiencia, areaEspecialidad, telefono ;
+    String userId, serviceId, nombreCompleto, añosExperiencia, areaEspecialidad, telefono ;
     Uri videoUri;
-    private EditText etAñosExperiencia, etAreaEspecialidad, etTelefono;
+    private EditText etNombreCompleto, etAñosExperiencia, etAreaEspecialidad, etTelefono;
     private Button btnInsertarVideo, btnCrearServicio;
     private VideoView vvInterprete;
     ProgressDialog progressDialog;
@@ -71,6 +71,7 @@ public class CrearServicio extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressBar = new ProgressBar(this);
 
+        etNombreCompleto = (EditText) findViewById(R.id.etNombreCompleto);
         etAñosExperiencia = (EditText) findViewById(R.id.etAñosExperiencia);
         etAreaEspecialidad = (EditText) findViewById(R.id.etAreaEspecialidad);
         etTelefono = (EditText) findViewById(R.id.etTelefono);
@@ -96,11 +97,15 @@ public class CrearServicio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                 nombreCompleto = etNombreCompleto.getText().toString();
                  añosExperiencia = etAñosExperiencia.getText().toString();
                  areaEspecialidad = etAreaEspecialidad.getText().toString().trim();
                  telefono = etTelefono.getText().toString().trim();
 
-                if(TextUtils.isEmpty(añosExperiencia)){
+                if(TextUtils.isEmpty(nombreCompleto)){
+                    etNombreCompleto.setError("Ingresa tu nombre completo");
+                    etNombreCompleto.requestFocus();
+                }else if(TextUtils.isEmpty(añosExperiencia)){
                    etAñosExperiencia.setError("años");
                    etAñosExperiencia.requestFocus();
                 }else if (TextUtils.isEmpty(areaEspecialidad)) {
@@ -166,7 +171,6 @@ public class CrearServicio extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-
         if(videoUri != null){
             serviceId = db.collection("servicio").document().getId();
             StorageReference filePathVideo = storage.getReference().child("videos").child(videoUri.getLastPathSegment()+"."+getExt(videoUri));
@@ -178,12 +182,13 @@ public class CrearServicio extends AppCompatActivity {
 
                     Map<String, Object> service = new HashMap<>();
                     service.put("serviceId", serviceId);
+                    service.put("nombreCompleto", nombreCompleto);
                     service.put("añosEsperiencia", añosExperiencia);
                     service.put("areaEspecialidad", areaEspecialidad);
                     service.put("telefono", telefono);
                     service.put("videoUri", filePathVideo);
 
-                    Servicio servicio = new Servicio(serviceId, añosExperiencia, areaEspecialidad, telefono, filePathVideo, userId);
+                    Servicio servicio = new Servicio(serviceId, nombreCompleto, añosExperiencia, areaEspecialidad, telefono, filePathVideo, userId);
 
                     documentReference.set(servicio).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override

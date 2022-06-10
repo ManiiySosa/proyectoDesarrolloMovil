@@ -32,4 +32,7 @@
     <string name="txt_mEditarServicio">EDITAR SERVICIO</string>
     <string name="txt_mVerValoraciones">VER VALORACIONES</string>
     <string name="txt_tvInterpretesDestacados">Interpretes Destacados</string>
+    <string name="txt_etNombreC">NOMBRE COMPLETO</string>
+    <string name="txt_tvCvCiudad">Ciudad</string>
+    <string name="txt_tvCvCorreo">Correo</string>
 </resources>
