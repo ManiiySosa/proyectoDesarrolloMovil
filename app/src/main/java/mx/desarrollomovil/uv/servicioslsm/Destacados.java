@@ -52,6 +52,8 @@ public class Destacados extends AppCompatActivity {
     FirebaseStorage storage;
     FirebaseFirestore db;
     FirebaseUser usuario;
+    Menu mymenu;
+    MenuItem mCrearServicio, mEditarServicio, mVerValoraciones, mCerrarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,9 +73,6 @@ public class Destacados extends AppCompatActivity {
 
         rvPerfil = (RecyclerView) findViewById(R.id.rvPerfil);
 
-        Query query = db.collection("users").whereEqualTo("tipo", "S");
-
-
         //DocumentReference documentReference = db.collection("users").whereEqualTo("tipo", );
         //usuarioAdapter = new UsuarioAdapter(perfiles, this, tipo);
         rvPerfil.setLayoutManager(new LinearLayoutManager(getBaseContext(), RecyclerView.VERTICAL, false));
@@ -82,6 +81,53 @@ public class Destacados extends AppCompatActivity {
         rvPerfil.setAdapter(usuarioAdapter);
         rvPerfil.setHasFixedSize(true);
 
+       this.getPerfiles();
+
+    }
+
+    public void init(){
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_opciones, menu);
+        mymenu = menu;
+        mCrearServicio = menu.findItem(R.id.mCrearServicio);
+        mEditarServicio = menu.findItem(R.id.mEditarServicio);
+        mVerValoraciones = menu.findItem(R.id.mVerValoraciones);
+        DocumentReference  dr = db.collection("users").document(userId);
+        dr.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if(documentSnapshot.getString("tipo").equals("S")){
+                    mCrearServicio.setVisible(false);
+                    mEditarServicio.setVisible(false);
+                    mVerValoraciones.setVisible(false);
+                }
+            }
+        });
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.mCrearServicio:
+                Intent intent = new Intent(this, CrearServicio.class);
+                startActivity(intent);
+                break;
+            case R.id.mEditarServicio:
+
+                break;
+            case R.id.mVerValoraciones:
+
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void getPerfiles() {
         db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -103,97 +149,6 @@ public class Destacados extends AppCompatActivity {
             }
         });
 
-
     }
 
-    public void init(){
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_opciones, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.mCrearServicio:
-                Intent intent = new Intent(this, CrearServicio.class);
-                startActivity(intent);
-                break;
-            case R.id.mEditarServicio:
-
-                break;
-            case R.id.mVerValoraciones:
-
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-   /*public void getPerfiles(){
-        db.collection("users").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
-                        for (DocumentSnapshot ds : list){
-                           Usuario usuario = new Usuario(
-                                    ds.getString("ciudad"),
-                                    ds.getString("correo"),
-                                    ds.getString("contraseña"),
-                                    ds.getId(),
-                                    ds.getString("imgUrl"),
-                                    ds.getString("nombre"),
-                                    ds.getString("tipo")
-                            );
-                            perfiles.add(usuario);
-                    }
-                        usuarioAdapter.notifyDataSetChanged();
-                    }
-                });*/
-                /*.addOnCompleteListener(task -> {
-            perfiles.clear();
-            if(task.isSuccessful()){
-                Usuario usuario;
-                for(DocumentSnapshot documentSnapshot : task.getResult()){
-                   /* usuario = new Usuario(
-                            documentSnapshot.getString("ciudad"),
-                            documentSnapshot.getString("correo"),
-                            documentSnapshot.getString("contraseña"),
-                            documentSnapshot.getId(),
-                            documentSnapshot.getString("imgUrl"),
-                            documentSnapshot.getString("nombre"),
-                            documentSnapshot.getString("tipo")
-                    );
-                    Usuario obj = documentSnapshot.toObject(Usuario.class);
-                    perfiles.add(obj);
-                }
-                usuarioAdapter.notifyDataSetChanged();
-            }
-
-        });*/
-
-  // }
-
-    /*public void inicializarAdapter(){
-        UsuarioAdapter adapter = new UsuarioAdapter(perfilesServicios);
-        listaServicios.setAdapter(adapter);
-    }
-
-    public void inicializarListaServicios(){
-        perfiles = new ArrayList<Usuario>();
-        perfilesServicios = new ArrayList<Servicio>();
-
-        perfiles.add(new Usuario(
-                1, "Manuel", "Sosa", "mani@sosa", "12345", "Xalapa", R.drawable.ic_perfil, 'I'
-        ));
-        perfiles.add(new Usuario(
-                2, "Benito", "Sousa", "beni@sousa", "12345", "Xalapa", R.drawable.ic_perfil, 'I'
-        ));
-
-        perfilesServicios.add(new Servicio(
-                1, 5, "Educacion", "2233445566", R.drawable.ic_launcher_background, 1
-        ));*/
 }

@@ -23,6 +23,11 @@
                 android:orderInCategory="12"
                 >
             </item>
+            <item android:id="@+id/mCerrarSesion"
+                android:title="@string/txt_mCerrarSesion"
+                android:orderInCategory="13"
+                >
+            </item>
         </menu>
 
     </item>
