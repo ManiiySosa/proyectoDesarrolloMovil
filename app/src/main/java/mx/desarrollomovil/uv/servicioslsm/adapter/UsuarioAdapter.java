@@ -1,4 +1,4 @@
-package mx.desarrollomovil.uv.servicioslsm.adapter;
+/*package mx.desarrollomovil.uv.servicioslsm.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -23,7 +23,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
     private List<Usuario> perfiles;
     private LayoutInflater layoutInflater;
     private Context context;
-    private String tipo = "i";
+    private String tipo;
 
     public UsuarioAdapter(List<Usuario> perfiles, Context context, String tipo){
         this.layoutInflater = LayoutInflater.from(context);
@@ -34,20 +34,23 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public UsuarioAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = layoutInflater.inflate(R.layout.cardviewperfil, null);
         return new UsuarioAdapter.ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.bindData(perfiles.get(position));
+        holder.setList(perfiles, position);
         holder.setOnClickListener();
+
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return perfiles.size();
     }
 
     public void setItems(List<Usuario> perfiles){
@@ -60,7 +63,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
         Button btnCvVerPerfil;
         List<Usuario> perfiles;
         Context context;
-        String id;
+        String id, tipo;
         int position;
 
         public ViewHolder(@NonNull View itemView) {
@@ -72,6 +75,13 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
             tvCvCiudad = itemView.findViewById(R.id.tvCvCiudad);
             tvCvCorreo = itemView.findViewById(R.id.tvCvCorreo);
             btnCvVerPerfil = itemView.findViewById(R.id.btnCvVerPerfil);
+
+            if(tipo.equals("i")){
+                itemView.setVisibility(View.VISIBLE);
+            }else if(tipo.equals("s")){
+                itemView.setVisibility(View.INVISIBLE);
+            }
+
 
         }
 
@@ -85,6 +95,7 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
             tvCvCiudad.setText(item.getCiudad());
             tvCvCorreo.setText(item.getCorreo());
             this.id = item.getId();
+
         }
 
         @Override
@@ -100,3 +111,4 @@ public class UsuarioAdapter extends RecyclerView.Adapter<UsuarioAdapter.ViewHold
         }
     }
 }
+*/

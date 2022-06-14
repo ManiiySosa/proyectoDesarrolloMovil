@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".ConfiguracionPerfil">
 
+    <TextView
+        android:id="@+id/tvSeleccionaFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="600dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/txt_tvSeleccionaFoto"
+        android:textSize="@dimen/sizeTxt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imgPerfil"
         android:layout_width="150dp"

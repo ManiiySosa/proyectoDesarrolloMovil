@@ -17,10 +17,11 @@
 
         <ImageView
             android:id="@+id/imgCvPerfil"
-            android:layout_width="110sp"
-            android:layout_height="110sp"
+            android:layout_width="120sp"
+            android:layout_height="125sp"
             android:layout_margin="@dimen/quince"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,7 +72,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/texto_btnVerPerfil"
                 android:drawableEnd="@drawable/ic_eye"/>
-
 
         </LinearLayout>
 
