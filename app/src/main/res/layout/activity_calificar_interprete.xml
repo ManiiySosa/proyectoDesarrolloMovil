@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CalificarInterprete">
+
+    <include android:id="@+id/miToolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/tvNombreInterpreteCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nombre interprete a calificar"
+        android:textSize="@dimen/veinte"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/veinte"
+        android:padding="@dimen/cinco"
+        android:layout_marginBottom="@dimen/diez"/>
+
+    <TextView
+        android:id="@+id/tvCalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calidad"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/vCinco"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/diez"
+        android:padding="@dimen/cinco"
+        android:layout_marginBottom="@dimen/diez"
+        android:letterSpacing="0.1"/>
+
+    <RatingBar
+        android:id="@+id/rbCalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/tvVideoSordo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_tvVideoSordo"
+        android:textSize="@dimen/veinte"
+        android:layout_margin="@dimen/quince"
+        android:textStyle="bold"
+        android:letterSpacing="0.01"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/veinte"
+        android:layout_marginBottom="@dimen/veinte"
+        android:layout_marginLeft="@dimen/veinte">
+
+        <VideoView
+            android:id="@+id/vvSordo"
+            android:layout_width="180dp"
+            android:layout_height="150dp"
+            android:layout_marginRight="@dimen/veinte">
+
+        </VideoView>
+
+        <Button
+            android:id="@+id/btnInsertarVideoSordo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heigthButtons"
+            android:text="@string/txt_btnInsertarVideo"
+            android:drawableEnd="@drawable/ic_video"
+            android:theme="@style/RaisedButton"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="@dimen/veinte"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnEnviarCalificacion"
+        android:layout_width="@dimen/widthButtons"
+        android:layout_height="@dimen/heigthButtons"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/green"
+        android:fontFamily="sans-serif"
+        android:letterSpacing="0.2"
+        android:text="@string/txt_btnCalificar"
+        android:textSize="@dimen/sizeTextButtons"
+        android:theme="@style/RaisedButton" />
+
+</LinearLayout>

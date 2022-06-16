@@ -40,4 +40,7 @@
     <string name="txt_tvAñosExp">Años experiencia</string>
     <string name="txt_etAreaEspecialidad">Area especialidad</string>
     <string name="txt_tvTelefono">Telefono</string>
+    <string name="txt_tvValoracion">Valoracion</string>
+    <string name="txt_tvVideoSordo">Insertar video del porque lo evaluo de dicha forma y comentarios</string>
+    <string name="txt_btnCalificar">Enviar</string>
 </resources>

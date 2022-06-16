@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.MediaController;
@@ -77,10 +79,18 @@ public class PerfilInterprete extends AppCompatActivity {
 
         Glide.with(getApplicationContext()).load(imgUrl).into(imgPerfilServicio);
 
-
-
-
         this.obtenerDatosServicio();
+
+        btnCalificarinterprete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nombreCompleto = tvNombrePerfil.getText().toString().trim();
+                Intent intent = new Intent(getBaseContext(), CalificarInterprete.class);
+                intent.putExtra("nombreCompleto", nombreCompleto);
+                intent.putExtra("userId", userId);
+                startActivity(intent);
+            }
+        });
 
 
     }
