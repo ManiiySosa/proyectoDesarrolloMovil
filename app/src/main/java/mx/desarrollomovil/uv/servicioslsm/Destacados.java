@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -47,6 +48,7 @@ public class Destacados extends AppCompatActivity {
     FirebaseUser usuario;
     Menu mymenu;
     MenuItem mCrearServicio, mEditarServicio, mVerValoraciones, mCerrarSesion;
+    SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +67,7 @@ public class Destacados extends AppCompatActivity {
         civ = (CircleImageView) findViewById(R.id.imgPerfil);
 
         rvPerfil = (RecyclerView) findViewById(R.id.rvPerfil);
+        searchView = (SearchView) findViewById(R.id.svInterpretes);
 
         //DocumentReference documentReference = db.collection("users").whereEqualTo("tipo", );
         //usuarioAdapter = new UsuarioAdapter(perfiles, this, tipo);
@@ -75,6 +78,8 @@ public class Destacados extends AppCompatActivity {
         rvPerfil.setHasFixedSize(true);
 
        this.getPerfiles();
+
+       this.search_view();
 
     }
 
@@ -142,6 +147,22 @@ public class Destacados extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void search_view(){
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                usuarioAdapter.filtrado(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                usuarioAdapter.filtrado(newText);
+                return false;
+            }
+        });
     }
 
 }

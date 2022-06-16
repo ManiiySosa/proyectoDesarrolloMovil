@@ -27,6 +27,16 @@
         android:layout_marginTop="15dp"
         android:padding="@dimen/cinco"/>
 
+    <SearchView
+        android:id="@+id/svInterpretes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/diez"
+        android:layout_marginBottom="@dimen/cinco"
+        android:background="@color/white"
+        android:padding="2sp"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPerfil"
         android:layout_width="match_parent"

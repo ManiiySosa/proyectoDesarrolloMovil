@@ -15,7 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 
 import mx.desarrollomovil.uv.servicioslsm.PerfilInterprete;
 import mx.desarrollomovil.uv.servicioslsm.R;
@@ -25,12 +28,15 @@ public class UsuarioAdapter2 extends RecyclerView.Adapter<UsuarioAdapter2.Usuari
 
     Context context;
     List<Usuario> perfiles;
+    List<Usuario> listaPerfiles;
     String tipo, userId;
 
     public UsuarioAdapter2(Context context, List<Usuario> perfiles, String tipo){
         this.context = context;
         this.perfiles=perfiles;
         this.tipo = tipo;
+        listaPerfiles = new ArrayList<>();
+        listaPerfiles.addAll(perfiles);
     }
 
     @NonNull
@@ -60,6 +66,27 @@ public class UsuarioAdapter2 extends RecyclerView.Adapter<UsuarioAdapter2.Usuari
         });
     }
 
+    public void filtrado(String txtBuscar){
+        int longitud = txtBuscar.length();
+        if(longitud == 0){
+            perfiles.clear();
+            perfiles.addAll(listaPerfiles);
+        }else{
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                List<Usuario> coleccion = perfiles.stream().filter(i -> i.getNombre().toLowerCase().contains(txtBuscar.toLowerCase())).collect(Collectors.toList());
+                perfiles.clear();
+                perfiles.addAll(coleccion);
+            }else{
+                for(Usuario u: listaPerfiles){
+                    if(u.getNombre().toLowerCase().contains(txtBuscar.toLowerCase())){
+                        perfiles.add(u);
+                    }
+                }
+            }
+        }
+        notifyDataSetChanged();
+    }
+
     @Override
     public int getItemCount() {
         return perfiles.size();
@@ -83,7 +110,6 @@ public class UsuarioAdapter2 extends RecyclerView.Adapter<UsuarioAdapter2.Usuari
             tvCvCorreo = (TextView) itemView.findViewById(R.id.tvCvCorreo);
             btnCvVerPerfil = (Button) itemView.findViewById(R.id.btnCvVerPerfil);
 
-
             if(tipo == "I"){
                 itemView.setVisibility(View.VISIBLE);
             }else if (tipo == "S"){
@@ -92,4 +118,5 @@ public class UsuarioAdapter2 extends RecyclerView.Adapter<UsuarioAdapter2.Usuari
 
         }
     }
+
 }
