@@ -1,5 +1,7 @@
 package mx.desarrollomovil.uv.servicioslsm.model;
 
+import java.io.Serializable;
+
 public class Servicio {
     private String serviceId;
     private String nombreCompleto;
@@ -10,11 +12,6 @@ public class Servicio {
     private String userId;
 
     public Servicio(){
-
-    }
-
-    public Servicio(String videoUrl){
-        this.videoUrl = videoUrl;
 
     }
 

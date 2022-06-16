@@ -46,7 +46,6 @@
                 android:layout_marginTop="@dimen/veinte"
                 android:paddingLeft="10dp"
                 android:layout_gravity="center"
-                android:textAllCaps="true"
                 />
 
             <LinearLayout

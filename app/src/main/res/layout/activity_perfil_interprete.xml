@@ -1,15 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".PerfilInterprete">
 
-    <include android:id="@+id/miToolbar"
-        layout="@layout/toolbar"
-        >
-    </include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <include android:id="@+id/miToolbar"
+            layout="@layout/toolbar"
+            >
+        </include>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/cinco"
+            android:layout_margin="@dimen/quince"
+            android:background="@color/white"
+            app:cardElevation="@dimen/diez"
+            app:cardCornerRadius="@dimen/diez"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgPerfilServicio"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="@dimen/quince"
+                        android:layout_marginLeft="@dimen/quince"
+                        android:src="@drawable/avatar"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvNombrePerfil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/texto_tvNombrePerfil"
+                        android:textSize="@dimen/sizeTxt"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:padding="@dimen/cinco"
+                        android:textColor="@color/blacktxt"
+                        android:layout_marginTop="@dimen/diez"
+                        android:layout_marginBottom="@dimen/cinco"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <VideoView
+                        android:id="@+id/vvInterpreteServicio"
+                        android:layout_width="320sp"
+                        android:layout_height="220sp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/quince"
+                        android:layout_marginBottom="@dimen/quince">
+
+                    </VideoView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_etAreaEspecialidad"
+                        android:textSize="@dimen/sizeTxt"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:padding="@dimen/cinco"
+                        android:textColor="@color/blacktxt"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvEspecialidad"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/sizeTxt"
+                        android:padding="@dimen/cinco"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="@dimen/cinco"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        android:text="especialidad"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_tvAñosExp"
+                        android:textSize="@dimen/sizeTxt"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:padding="@dimen/cinco"
+                        android:textColor="@color/blacktxt"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        />
+
+                    <TextView
+                        android:id="@+id/AñosExperiencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/sizeTxt"
+                        android:padding="@dimen/cinco"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="@dimen/cinco"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        android:text="experiencia"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_tvTelefono"
+                        android:textSize="@dimen/sizeTxt"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:padding="@dimen/cinco"
+                        android:textColor="@color/blacktxt"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/sizeTxt"
+                        android:padding="@dimen/cinco"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="@dimen/cinco"
+                        android:layout_marginTop="@dimen/cinco"
+                        android:layout_marginBottom="@dimen/cinco"
+                        android:text="telefono"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCalificarInterprete"
+                    android:layout_width="@dimen/widthButtons"
+                    android:layout_height="@dimen/heigthButtons"
+                    android:theme="@style/RaisedButton"
+                    android:text="Calificar Interprete"
+                    android:drawableEnd="@drawable/ic_star"
+                    android:paddingRight="@dimen/treinta"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/diez"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

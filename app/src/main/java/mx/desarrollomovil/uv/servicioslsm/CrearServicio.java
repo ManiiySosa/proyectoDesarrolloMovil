@@ -197,6 +197,7 @@ public class CrearServicio extends AppCompatActivity {
                             progressDialog.dismiss();
 
                             Intent intent = new Intent(CrearServicio.this, Destacados.class);
+                            intent.putExtra("nombreCompleto", nombreCompleto);
                             intent.putExtra("añosExperiencia", añosExperiencia);
                             intent.putExtra("areaEspecialidad", areaEspecialidad);
                             intent.putExtra("telefono", telefono);

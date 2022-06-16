@@ -100,7 +100,6 @@
         android:drawableStart="@drawable/ic_password"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="@string/title_password"
         android:paddingLeft="10sp"
         android:textAllCaps="true"
         android:textSize="@dimen/sizeInputs"
