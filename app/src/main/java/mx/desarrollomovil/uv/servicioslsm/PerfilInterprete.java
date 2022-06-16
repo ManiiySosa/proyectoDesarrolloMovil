@@ -92,7 +92,6 @@ public class PerfilInterprete extends AppCompatActivity {
             }
         });
 
-
     }
 
     @Override

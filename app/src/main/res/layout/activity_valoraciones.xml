@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Valoraciones">
+
+    <include android:id="@+id/miToolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+
+    <TextView
+        android:id="@+id/tvValoraciones"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FD511A"
+        android:text="@string/txt_tvValoraciones"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:letterSpacing=".04"
+        android:textAllCaps="true"
+        android:layout_marginTop="15dp" />
+
+</LinearLayout>

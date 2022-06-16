@@ -7,12 +7,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SearchView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -38,7 +42,8 @@ public class Destacados extends AppCompatActivity {
     //ArrayList<Servicio> perfilesServicios;
     //private RecyclerView listaServicios;
     private List<Usuario> perfiles;
-    String userId, tipo;
+    String userId, tipo, imgUrlPerfilUsuario;
+   // Uri imgUrlPerfilUsuario;
     private Toolbar miToolbar;
     CircleImageView civ;
     RecyclerView rvPerfil;
@@ -46,6 +51,7 @@ public class Destacados extends AppCompatActivity {
     FirebaseStorage storage;
     FirebaseFirestore db;
     FirebaseUser usuario;
+    FirebaseAuth auth;
     Menu mymenu;
     MenuItem mCrearServicio, mEditarServicio, mVerValoraciones, mCerrarSesion;
     SearchView searchView;
@@ -58,13 +64,14 @@ public class Destacados extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
+        auth = FirebaseAuth.getInstance();
         usuario = FirebaseAuth.getInstance().getCurrentUser();
         userId = usuario.getUid();
 
         miToolbar = (Toolbar) findViewById(R.id.miToolbar);
         setSupportActionBar(miToolbar);
 
-        civ = (CircleImageView) findViewById(R.id.imgPerfil);
+        civ = (CircleImageView) findViewById(R.id.imgPerfilUsuario);
 
         rvPerfil = (RecyclerView) findViewById(R.id.rvPerfil);
         searchView = (SearchView) findViewById(R.id.svInterpretes);
@@ -76,6 +83,35 @@ public class Destacados extends AppCompatActivity {
         usuarioAdapter = new UsuarioAdapter2(getBaseContext(),perfiles,tipo);
         rvPerfil.setAdapter(usuarioAdapter);
         rvPerfil.setHasFixedSize(true);
+
+        DocumentReference dr = db.collection("users").document(userId);
+        dr.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot ds = task.getResult();
+                    imgUrlPerfilUsuario = ds.getString("imgUrl");
+                }
+                Glide.with(getBaseContext()).load(imgUrlPerfilUsuario).into(civ);
+                //civ.setImageURI(Uri.parse(imgUrlPerfilUsuario));
+            }
+
+        });
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            civ.setTooltipText("click para editar perfl");
+        }
+
+        // Glide.with(getBaseContext()).load(imgUrlPerfilUsuario).into(civ);
+
+
+
+        civ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
        this.getPerfiles();
 
@@ -116,9 +152,19 @@ public class Destacados extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.mEditarServicio:
+                Intent intent2 = new Intent(getBaseContext(), EditarServicio.class);
+                startActivity(intent2);
 
                 break;
             case R.id.mVerValoraciones:
+                Intent intent3 = new Intent(getBaseContext(), Valoraciones.class);
+                startActivity(intent3);
+
+                break;
+            case  R.id.mCerrarSesion:
+                auth.signOut();
+                startActivity(new Intent(getBaseContext(), MainActivity.class));
+                finish();
 
                 break;
         }

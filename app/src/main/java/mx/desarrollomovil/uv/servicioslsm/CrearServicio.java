@@ -60,6 +60,8 @@ public class CrearServicio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_servicio);
 
+        this.setTitle("registrar servicio");
+
         Toolbar miToolbar = (Toolbar) findViewById(R.id.miToolbar);
         setSupportActionBar(miToolbar);
 

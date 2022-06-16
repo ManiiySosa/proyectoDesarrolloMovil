@@ -43,4 +43,6 @@
     <string name="txt_tvValoracion">Valoracion</string>
     <string name="txt_tvVideoSordo">Insertar video del porque lo evaluo de dicha forma y comentarios</string>
     <string name="txt_btnCalificar">Enviar</string>
+    <string name="txt_btnEditarServicio">Editar Servicio</string>
+    <string name="txt_tvValoraciones">Valoraciones</string>
 </resources>
