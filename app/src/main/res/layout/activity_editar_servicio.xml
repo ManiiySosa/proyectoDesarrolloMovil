@@ -124,7 +124,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnCrearServicio"
+                android:id="@+id/btnEditarServicio"
                 android:layout_width="@dimen/widthButtons"
                 android:layout_height="@dimen/heigthButtons"
                 android:layout_gravity="center"

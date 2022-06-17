@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvValoracion"
+    android:padding="@dimen/diez"
+    android:layout_margin="@dimen/diez"
+    android:backgroundTint="@color/white"
+    app:cardElevation="@dimen/cinco"
+    app:cardCornerRadius="@dimen/quince">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cvimgSordo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/quince"
+                android:layout_marginLeft="@dimen/quince"
+                android:src="@drawable/avatar"
+                />
+
+            <TextView
+                android:id="@+id/tvNombreSordo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Sordo"
+                android:textSize="@dimen/sizeTxt"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:padding="@dimen/cinco"
+                android:textColor="@color/blacktxt"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/cinco"
+                android:layout_marginLeft="@dimen/diez"
+                />
+
+        </LinearLayout>
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Valoración"
+                 android:layout_marginTop="@dimen/cinco"
+                 android:layout_marginBottom="@dimen/diez"
+                 android:textSize="@dimen/sizeTxt"
+                 android:textStyle="bold"
+                 android:gravity="center"
+                 android:layout_gravity="center"/>
+
+             <RatingBar
+                 android:id="@+id/rbValoracion"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 tools:ignore="SpeakableTextPresentCheck" />
+
+             <VideoView
+                 android:id="@+id/vvValoracionSordo"
+                 android:layout_width="260sp"
+                 android:layout_height="160sp"
+                 android:layout_gravity="center"
+                 android:layout_marginBottom="@dimen/diez">
+
+             </VideoView>
+         </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

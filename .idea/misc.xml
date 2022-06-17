@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/drawable/editarperfil.xml" value="0.1" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.1735" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/drawable/ic_perfil.xml" value="0.1" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/drawable/img_holaLSM_background.xml" value="0.1" />
@@ -16,8 +17,10 @@
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/activity_perfil_interprete.xml" value="0.18" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/activity_register.xml" value="0.12" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/activity_usuario_adapter2.xml" value="0.1" />
-        <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/activity_valoraciones.xml" value="0.15" />
+        <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/activity_valoraciones.xml" value="0.12" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/cardviewperfil.xml" value="0.18" />
+        <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/cardviewvaloraciones.xml" value="0.1" />
+        <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/popupeditarperfil.xml" value="0.15" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/layout/toolbar.xml" value="0.15" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/menu/menu_opciones.xml" value="0.15" />
         <entry key="..\:/M/proyectoDesarrolloMovil/app/src/main/res/mipmap-anydpi-v26/img_holaLSM.xml" value="0.1" />

@@ -3,9 +3,11 @@ package mx.desarrollomovil.uv.servicioslsm;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -45,7 +47,7 @@ public class Destacados extends AppCompatActivity {
     String userId, tipo, imgUrlPerfilUsuario;
    // Uri imgUrlPerfilUsuario;
     private Toolbar miToolbar;
-    CircleImageView civ;
+    CircleImageView civ, imgEditarFoto;
     RecyclerView rvPerfil;
     UsuarioAdapter2 usuarioAdapter;
     FirebaseStorage storage;
@@ -55,6 +57,7 @@ public class Destacados extends AppCompatActivity {
     Menu mymenu;
     MenuItem mCrearServicio, mEditarServicio, mVerValoraciones, mCerrarSesion;
     SearchView searchView;
+    Dialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,7 @@ public class Destacados extends AppCompatActivity {
         setSupportActionBar(miToolbar);
 
         civ = (CircleImageView) findViewById(R.id.imgPerfilUsuario);
+        imgEditarFoto = (CircleImageView) findViewById(R.id.imgEditarFoto);
 
         rvPerfil = (RecyclerView) findViewById(R.id.rvPerfil);
         searchView = (SearchView) findViewById(R.id.svInterpretes);
@@ -84,6 +88,8 @@ public class Destacados extends AppCompatActivity {
         rvPerfil.setAdapter(usuarioAdapter);
         rvPerfil.setHasFixedSize(true);
 
+        mDialog = new Dialog(this);
+
         DocumentReference dr = db.collection("users").document(userId);
         dr.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -93,6 +99,7 @@ public class Destacados extends AppCompatActivity {
                     imgUrlPerfilUsuario = ds.getString("imgUrl");
                 }
                 Glide.with(getBaseContext()).load(imgUrlPerfilUsuario).into(civ);
+               // Glide.with(getBaseContext()).load(imgUrlPerfilUsuario).into(imgEditarFoto);
                 //civ.setImageURI(Uri.parse(imgUrlPerfilUsuario));
             }
 
@@ -109,7 +116,10 @@ public class Destacados extends AppCompatActivity {
         civ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                mDialog.setContentView(R.layout.popupeditarperfil);
+                mDialog.setTitle("editar foto perfil");
+                mDialog.show();
+               //imgEditarFoto .setImageURI(Uri.parse(imgUrlPerfilUsuario));
             }
         });
 
@@ -119,9 +129,6 @@ public class Destacados extends AppCompatActivity {
 
     }
 
-    public void init(){
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

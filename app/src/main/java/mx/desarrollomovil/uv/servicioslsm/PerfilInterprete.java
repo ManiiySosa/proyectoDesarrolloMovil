@@ -31,21 +31,24 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.Source;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import mx.desarrollomovil.uv.servicioslsm.model.Servicio;
 import mx.desarrollomovil.uv.servicioslsm.model.Usuario;
 
 public class PerfilInterprete extends AppCompatActivity {
 
-    String userId, imgUrl, videoUrl, serviceId, nombreCompleto, areaEspecialidad, añosExperienciaS, telefono;
+    String userId, imgUrl, videoUrl, serviceId, nombreCompleto, areaEspecialidad, añosExperienciaS, telefono, imgUrlPerfilUsuario, usuarioId;
     ImageView imgPerfilServicio;
     VideoView vvInterpreteServicio;
     TextView tvNombrePerfil, tvEspecialidad, añosExperiencia, tvTelefono;
     Button btnCalificarinterprete;
     FirebaseUser user;
     FirebaseFirestore db;
+    FirebaseAuth auth;
     Servicio servicio;
     Usuario usuario;
     MediaController mediaController;
+    CircleImageView civ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,12 +62,14 @@ public class PerfilInterprete extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-       // userId = user.getUid();
+        usuarioId = user.getUid();
 
         db = FirebaseFirestore.getInstance();
 
         userId = getIntent().getStringExtra("userId");
         imgUrl = getIntent().getStringExtra("imgUrl");
+
+        civ = (CircleImageView) findViewById(R.id.imgPerfilUsuario);
 
         imgPerfilServicio = (ImageView) findViewById(R.id.imgPerfilServicio);
         tvNombrePerfil = (TextView) findViewById(R.id.tvNombrePerfil);
@@ -92,6 +97,19 @@ public class PerfilInterprete extends AppCompatActivity {
             }
         });
 
+        DocumentReference dr = db.collection("users").document(usuarioId);
+        dr.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()){
+                    DocumentSnapshot ds = task.getResult();
+                    imgUrlPerfilUsuario = ds.getString("imgUrl");
+                }
+                Glide.with(getBaseContext()).load(imgUrlPerfilUsuario).into(civ);
+            }
+
+        });
+
     }
 
     @Override
@@ -102,7 +120,6 @@ public class PerfilInterprete extends AppCompatActivity {
 
     public void obtenerDatosServicio(){
         //CollectionReference servicioRef = db.collection("servicio").document();
-        //serviceId = ser;
        // Query query = servicioRef.whereEqualTo("userId", userId);
 
         db.collection("servicio").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

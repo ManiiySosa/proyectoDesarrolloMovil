@@ -27,4 +27,12 @@
         android:textAllCaps="true"
         android:layout_marginTop="15dp" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvValoraciones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/miToolbar"
+        android:layout_marginTop="@dimen/quince"
+        android:padding="@dimen/diez" />
+
 </LinearLayout>
